@@ -22,7 +22,7 @@ export default {
 <style lang="scss" scoped>
 body {
   background: #30103f;
-  min-height: 93.75rem;
+
 }
 
 section {
@@ -33,7 +33,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 6.25rem;
+  // margin-bottom: 6.25rem;
   img {
     position: absolute;
     top: 0;

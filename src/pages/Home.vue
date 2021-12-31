@@ -31,9 +31,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container{
+.container {
   display: flex;
-  padding: 6.25rem 0;
+  padding: 3.125rem 0;
   width: 70%;
   margin: auto;
 
@@ -59,11 +59,26 @@ export default {
   }
 }
 
-// .girl-img{
-// min-width: 25rem;
-
-//   img{
-//     width: 100%;
-//   }
-// }
+@media screen and (max-width: 810px) {
+  .container {
+    flex-direction: column;
+    .col-left,
+    .col-right {
+      width: 100%;
+    }
+  .col-left {
+    padding-right: 0;
+    margin-bottom: 2.5rem;
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  .col-right{
+    height: 18.75rem
+  }
+  }
+}
 </style>
