@@ -92,7 +92,7 @@ header {
 @media screen and (max-width: 810px) {
   header {
     .nav-main {
-      // justify-content: end;
+      justify-content: end;
       padding: 1.875rem;
       ul.desktop {
         display: none;

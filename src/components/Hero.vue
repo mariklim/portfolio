@@ -27,7 +27,7 @@ body {
 
 section {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   display: flex;
