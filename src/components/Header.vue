@@ -1,8 +1,7 @@
 <template>
-  <div>
     <header>
       <nav class="nav-main">
-        <button class="menu-mobile">
+        <button class="menu-mobile" @click="showMenu()">
           <img src="../assets/images/menu_open.svg" />
           <img src="../assets/images/menu.svg" />
         </button>
@@ -21,13 +20,38 @@
           </li>
         </ul>
       </nav>
+      <nav>
+       <ul class="mobile" :class="{ 'show-element': displayElement }">
+           <li>
+            <router-link class="spacing" to="/">Home</router-link>
+          </li>
+          <li>
+            <router-link class="spacing" to="/about">Chi sono</router-link>
+          </li>
+          <li>
+            <router-link class="spacing" to="/portfolio">Portfolio</router-link>
+          </li>
+          <li>
+            <router-link class="spacing" to="/contacts">Contatti</router-link>
+          </li>
+        </ul>
+      </nav>
     </header>
-  </div>
 </template>
 
 <script>
 export default {
   name: "Header",
+  data() {
+    return {
+      displayElement: false,
+    };
+  },
+  methods: {
+    showMenu() {
+      this.displayElement = !this.displayElement;
+    },
+    },
 };
 </script>
 
@@ -42,10 +66,7 @@ header {
     background: linear-gradient(to bottom, #30103fb4, transparent);
     display: flex;
     color: rgb(255, 255, 255);
-    position: absolute;
     width: 100%;
-    top: 0;
-    left: 0;
     height: 5rem;
     justify-content: center;
     align-items: center;
@@ -64,6 +85,18 @@ header {
         }
       }
     }
+  }
+  .mobile{
+    display: none;
+    background-color: #3920706c;
+    width: 100%;
+    text-align: center;
+    a{
+      color: #fff8e9;
+    }
+  }
+   .show-element {
+    display: block;
   }
 }
 
@@ -87,6 +120,11 @@ header {
 }
 .menu-mobile:hover img:last-child {
   display: none;
+}
+@media screen and (min-width:811px) {
+  header .show-element{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 810px) {
