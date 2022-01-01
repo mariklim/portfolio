@@ -27,6 +27,8 @@ export default {
 
 body {
   background: #30103f;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 </style>
