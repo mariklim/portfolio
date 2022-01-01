@@ -2,35 +2,36 @@
   <div>
     <header>
       <nav class="nav-main">
-        <ul>
+        <button class="menu-mobile">
+          <img src="../assets/images/menu_open.svg" />
+          <img src="../assets/images/menu.svg" />
+        </button>
+        <ul class="desktop">
           <li>
-          <router-link class="spacing" to="/">Home</router-link>
+            <router-link class="spacing" to="/">Home</router-link>
           </li>
           <li>
-              <router-link class="spacing" to="/about">Chi sono</router-link>
+            <router-link class="spacing" to="/about">Chi sono</router-link>
           </li>
           <li>
-             <router-link class="spacing" to="/portfolio">Portfolio</router-link>
+            <router-link class="spacing" to="/portfolio">Portfolio</router-link>
           </li>
           <li>
-             <router-link class="spacing" to="/contacts">Contatti</router-link>
+            <router-link class="spacing" to="/contacts">Contatti</router-link>
           </li>
         </ul>
       </nav>
     </header>
-   
   </div>
 </template>
 
 <script>
 export default {
   name: "Header",
-  
 };
 </script>
 
 <style lang="scss" scoped>
-
 header {
   position: fixed;
   width: 100%;
@@ -48,7 +49,7 @@ header {
     height: 5rem;
     justify-content: center;
     align-items: center;
-    ul {
+    ul.desktop {
       display: flex;
       list-style: none;
       li {
@@ -66,5 +67,40 @@ header {
   }
 }
 
+.menu-mobile {
+  border: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #3920709f;
+  display: none;
+  cursor: pointer;
+  img:first-child {
+    display: none;
+  }
+}
+.menu-mobile:hover{
+  background-color: #392070ec;
+}
+.menu-mobile:hover img:first-child {
+  display: inline-block;
+}
+.menu-mobile:hover img:last-child {
+  display: none;
+}
 
+@media screen and (max-width: 810px) {
+  header {
+    .nav-main {
+      justify-content: end;
+      padding: 1.875rem;
+      ul.desktop {
+        display: none;
+      }
+    }
+  }
+  .menu-mobile {
+    display: inline-block;
+  }
+}
 </style>

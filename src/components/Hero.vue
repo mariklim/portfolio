@@ -72,4 +72,21 @@ section::before {
 #m6 {
   z-index: 3;
 }
+
+@media screen and (max-width: 810px) {
+section{
+  height: 50vh;
+  #text{
+    font-size: 3.125rem;
+  }
+}
+}
+@media screen and (max-width: 414px) {
+ section{
+  height: 30vh;
+   #text{
+    font-size: 2.8125rem;
+  }
+}
+}
 </style>
