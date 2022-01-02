@@ -95,7 +95,7 @@ header {
     height: 100vh;
     width: 25%;
     transition: all 0.4s ease;
-    padding: 1.875rem;
+    padding: 6.25rem 1.875rem;
     a {
       color: transparent;
       padding: 0.9375rem 0;
@@ -109,9 +109,8 @@ header {
     top: 0;
     width: 50%;
     height: 100vh;
-    padding: 1.875rem;
+    padding: 6.25rem 1.875rem;
     background-color: #6667abde;
-    border: 1px solid rgba(255, 255, 255, 0.116);
     -webkit-box-shadow: 8px 7px 10px -12px #000000;
    
     
@@ -123,6 +122,7 @@ header {
 }
 
 .menu-mobile {
+  z-index: 20;
   border: 0;
   width: 2.5rem;
   height: 2.5rem;
@@ -152,7 +152,7 @@ header {
 @media screen and (max-width: 810px) {
   header {
     .nav-main {
-      justify-content: end;
+      justify-content: start;
       padding: 1.875rem;
       ul.desktop {
         display: none;
