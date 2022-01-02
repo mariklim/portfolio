@@ -5,7 +5,7 @@
     </section>
     <section class="container">
       <div class="col-left">
-        <h1>Ciao!</h1>
+        <h3>Ciao!</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
           tenetur in consectetur voluptatum vero! Eius reiciendis quas enim,
@@ -31,19 +31,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/common";
 .container {
   display: flex;
   padding: 3.125rem 0;
   width: 70%;
   margin: auto;
+  color: $mainColorLight;
 
   .col-left {
     padding-right: 2.5rem;
     width: 60%;
-    color: #fee9bc;
+
     font-family: "Lato", sans-serif;
-    h1 {
-      font-size: 3.75rem;
+    h3 {
+      font-size: 2.5rem;
     }
     p {
       font-size: 1.25rem;

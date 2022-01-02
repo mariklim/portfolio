@@ -1,42 +1,42 @@
 <template>
-    <header>
-      <nav class="nav-main">
-        <button class="menu-mobile" @click="showMenu()">
-          <img src="../assets/images/menu_open.svg" />
-          <img src="../assets/images/menu.svg" />
-        </button>
-        <ul class="desktop">
-          <li>
-            <router-link class="spacing" to="/">Home</router-link>
-          </li>
-          <li>
-            <router-link class="spacing" to="/about">Chi sono</router-link>
-          </li>
-          <li>
-            <router-link class="spacing" to="/portfolio">Portfolio</router-link>
-          </li>
-          <li>
-            <router-link class="spacing" to="/contacts">Contatti</router-link>
-          </li>
-        </ul>
-      </nav>
-      <nav>
-       <ul class="mobile" :class="{ 'show-element': displayElement }">
-           <li>
-            <router-link class="spacing" to="/">Home</router-link>
-          </li>
-          <li>
-            <router-link class="spacing" to="/about">Chi sono</router-link>
-          </li>
-          <li>
-            <router-link class="spacing" to="/portfolio">Portfolio</router-link>
-          </li>
-          <li>
-            <router-link class="spacing" to="/contacts">Contatti</router-link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <header>
+    <nav class="nav-main">
+      <button class="menu-mobile" @click="showMenu()">
+        <img src="../assets/images/menu_open.svg" />
+        <img src="../assets/images/menu.svg" />
+      </button>
+      <ul class="desktop">
+        <li>
+          <router-link class="spacing" to="/">Home</router-link>
+        </li>
+        <li>
+          <router-link class="spacing" to="/about">Chi sono</router-link>
+        </li>
+        <li>
+          <router-link class="spacing" to="/portfolio">Portfolio</router-link>
+        </li>
+        <li>
+          <router-link class="spacing" to="/contacts">Contatti</router-link>
+        </li>
+      </ul>
+    </nav>
+    <nav class="nav-mobile">
+      <ul class="mobile" :class="{ 'show-element': displayElement }">
+        <li>
+          <router-link class="spacing" to="/">Home</router-link>
+        </li>
+        <li>
+          <router-link class="spacing" to="/about">Chi sono</router-link>
+        </li>
+        <li>
+          <router-link class="spacing" to="/portfolio">Portfolio</router-link>
+        </li>
+        <li>
+          <router-link class="spacing" to="/contacts">Contatti</router-link>
+        </li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
 <script>
@@ -51,11 +51,12 @@ export default {
     showMenu() {
       this.displayElement = !this.displayElement;
     },
-    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/common";
 header {
   position: fixed;
   width: 100%;
@@ -63,9 +64,8 @@ header {
   left: 0;
   z-index: 10;
   .nav-main {
-    background: linear-gradient(to bottom, #30103fb4, transparent);
     display: flex;
-    color: rgb(255, 255, 255);
+    color: $mainColorLight;
     width: 100%;
     height: 5rem;
     justify-content: center;
@@ -77,7 +77,7 @@ header {
         list-style: none;
         a {
           text-decoration: none;
-          color: #fff8e9;
+          color: $mainColorLight;
           display: inline-block;
           margin: 0 2.5rem;
           font-family: "Lato", sans-serif;
@@ -86,17 +86,39 @@ header {
       }
     }
   }
-  .mobile{
-    display: none;
-    background-color: #3920706c;
-    width: 100%;
-    text-align: center;
-    a{
-      color: #fff8e9;
+
+  .mobile {
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    background-color: transparent;
+    height: 100vh;
+    width: 25%;
+    transition: all 0.4s ease;
+    padding: 1.875rem;
+    a {
+      color: transparent;
+      padding: 0.9375rem 0;
+      display: inline-block;
+      font-size: 1.25rem;
     }
   }
-   .show-element {
-    display: block;
+  .show-element {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    padding: 1.875rem;
+    background-color: #6667abde;
+    border: 1px solid rgba(255, 255, 255, 0.116);
+    -webkit-box-shadow: 8px 7px 10px -12px #000000;
+   
+    
+    a {
+      color: $mainColorLight;
+      padding: 0.9375rem 0;
+    }
   }
 }
 
@@ -105,15 +127,15 @@ header {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background-color: #3920709f;
+  background-color: $mainColorBlu200;
   display: none;
   cursor: pointer;
   img:first-child {
     display: none;
   }
 }
-.menu-mobile:hover{
-  background-color: #392070ec;
+.menu-mobile:hover {
+  background-color: $mainColorBlu;
 }
 .menu-mobile:hover img:first-child {
   display: inline-block;
@@ -121,9 +143,9 @@ header {
 .menu-mobile:hover img:last-child {
   display: none;
 }
-@media screen and (min-width:811px) {
-  header .show-element{
-    display: none;
+@media screen and (min-width: 811px) {
+  header .show-element {
+    visibility: hidden;
   }
 }
 

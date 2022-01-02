@@ -26,7 +26,7 @@ export default {
 
 
 body {
-  background: #30103f;
+  background: $mainColor;
   width: 100%;
   overflow-x: hidden;
 }

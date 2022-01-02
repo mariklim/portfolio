@@ -20,10 +20,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-body {
-  background: #30103f;
-
-}
+@import "../assets/style/common";
 
 section {
   position: relative;
@@ -51,7 +48,7 @@ section::before {
   bottom: 0;
   width: 100%;
   height: 50%;
-  background: linear-gradient(to top, #30103f, transparent);
+  background: linear-gradient(to top, #6667AB, transparent);
   z-index: 9;
 }
 
@@ -59,8 +56,7 @@ section::before {
   position: relative;
   font-size: 4.375rem;
   z-index: 1;
-  background: -webkit-linear-gradient(bottom, #30103fd8 20%, #fb7719d7 77.84%);
-  -webkit-background-clip: text;
+  background: -webkit-linear-gradient(bottom, $mainColorBlu 20%, #38385f 77.84%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Pushster", cursive;

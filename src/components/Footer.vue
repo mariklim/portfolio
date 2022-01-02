@@ -34,12 +34,13 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/common";
 footer {
-  background-color: #331444;
+  background-color: $mainColorBlu;
   .row {
     padding: 0.9375rem 0 0 0;
     text-align: center;
-    color: #fff8e9;
+    color: $mainColorLight;
     ul {
       list-style: none;
       display: flex;
