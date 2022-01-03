@@ -34,7 +34,7 @@ export default {
 @import "../assets/style/common";
 .container {
   display: flex;
-  padding: 3.125rem 0;
+  padding: 3.125rem 0 5rem 0;
   width: 70%;
   margin: auto;
   color: $mainColorLight;

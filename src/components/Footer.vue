@@ -3,7 +3,7 @@
     <div class="row">
       <small> Powered By Maria Klimenko with </small>
       <img src="../assets/images/heart.svg" alt="heart" />
-      <div>
+      <!-- <div>
         <ul>
           <li>
             <a href="https://www.linkedin.com/in/klimenkomaria/">
@@ -24,7 +24,7 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </footer>
 </template>
@@ -37,8 +37,11 @@ export default {};
 @import "../assets/style/common";
 footer {
   background-color: $mainColorBlu;
+  position: fixed;
+  width: 100%;
+  bottom:0;
   .row {
-    padding: 0.9375rem 0 0 0;
+    padding: 0.9375rem 0 ;
     text-align: center;
     color: $mainColorLight;
     ul {

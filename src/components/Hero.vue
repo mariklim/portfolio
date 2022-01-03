@@ -54,11 +54,9 @@ section::before {
 
 #text {
   position: relative;
-  font-size: 4.375rem;
+  font-size: 3.125rem;
   z-index: 1;
-  background: -webkit-linear-gradient(bottom, $mainColorBlu 20%, #38385f 77.84%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+ color: #fffff9;
   font-family: "Pushster", cursive;
 }
 

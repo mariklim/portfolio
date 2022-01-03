@@ -23,7 +23,7 @@ window.addEventListener("scroll", function(){
     this.m5.style.top = value * 0.15 + 'px';
     this.m6.style.top = value * 0.05 + 'px';
     this.light.style.top = -value * 0.05 + 'px';
-    this.text.style.top = value * 0.5 + 'px';
+    this.text.style.top = value * 0.15 + 'px';
   
 
 });
